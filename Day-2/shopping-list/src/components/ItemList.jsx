@@ -4,7 +4,7 @@ import Item from './Item';
 
 function ItemList({ items, toggleItem, deleteItem, startEditItem }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+    <div className="grid grid-cols-1 md:grid-cols-1 gap-4 w-full">
       {items.length === 0 ? (
         <p className="text-center text-lg text-gray-500">No items</p>
       ) : (
