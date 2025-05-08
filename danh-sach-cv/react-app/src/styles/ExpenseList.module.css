@@ -1,0 +1,18 @@
+.listContainer {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h3 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.total {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2d89e5;
+}
