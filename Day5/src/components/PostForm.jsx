@@ -42,18 +42,18 @@
     if (isEdit && isLoading) return <div>Đang tải dữ liệu...</div>;
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='formContainer'>
         <h2>{isEdit ? 'Chỉnh sửa bài viết' : 'Tạo bài viết mới'}</h2>
-        <div>
+        <div className='formGroup'>
             <label>Tiêu đề:</label>
             <input value={title} onChange={(e) => setTitle(e.target.value)} required />
         </div>
-        <div>
+        <div className='formGroup'>
             <label>Nội dung:</label>
             <textarea value={body} onChange={(e) => setBody(e.target.value)} required />
         </div>
-        <button type="submit">{isEdit ? 'Cập nhật' : 'Tạo mới'}</button>
-        {mutation.isError && <div>Lỗi: {mutation.error.message}</div>}
+        <button type="submit" className='buttonSubmit'>{isEdit ? 'Cập nhật' : 'Tạo mới'}</button>
+        {mutation.isError && <div className='errorMessage'>Lỗi: {mutation.error.message}</div>}
         </form>
     );
     }

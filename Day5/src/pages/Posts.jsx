@@ -1,6 +1,8 @@
-import { useQuery } from '@tanstack/react-query';
-import { getPosts } from '../api/api';
-import PostItem from '../components/PostItem';
+    // src/pages/Posts.jsx
+    import React from 'react';
+    import { useQuery } from '@tanstack/react-query';
+    import { getPosts } from '../api/api';
+    import PostItem from '../components/PostItem';
 
     function Posts() {
     const { data, isLoading, isError, error } = useQuery({
@@ -12,11 +14,13 @@ import PostItem from '../components/PostItem';
     if (isError) return <div>Lỗi: {error.message}</div>;
 
     return (
-        <div>
-        <h2>Danh sách bài viết</h2>
-        {data.map((post) => (
+        <div className='container'>
+        <h2>📚 Danh sách bài viết</h2>
+        <div className='grid'>
+            {data.map((post) => (
             <PostItem key={post.id} post={post} />
-        ))}
+            ))}
+        </div>
         </div>
     );
     }
