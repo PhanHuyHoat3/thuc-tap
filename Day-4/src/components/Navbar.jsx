@@ -10,14 +10,14 @@ function Navbar() {
     localStorage.removeItem('token');
     navigate('/login');
   };
-
+      
   const handleLogin = () => {
     navigate('/login');  // Chuyển hướng đến trang đăng nhập
   };
 
   return (
-    <AppBar position="static">
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', p: { xs: 1, md: 2 } }}>
+    <AppBar position="static" sx={{ backgroundColor: palette.primary.main }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', p: { xs: 1, md: 2 },  }}>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Button
             component={NavLink}
