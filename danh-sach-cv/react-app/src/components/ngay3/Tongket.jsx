@@ -11,16 +11,24 @@
         const [editingExpense, setEditingExpense] = useState(null);
 
     // 📥 Load từ localStorage hoặc từ API khi khởi động
-    useEffect(() => {
-        const storedExpenses = localStorage.getItem('expenses');
-        if (storedExpenses) {
+useEffect(() => {
+    const storedExpenses = localStorage.getItem('expenses');
+    if (storedExpenses) {
         setExpenses(JSON.parse(storedExpenses));
-        } else {
-        axios.get(API_URL)
-            .then(res => setExpenses(res.data))
-            .catch(err => console.error("Lỗi tải dữ liệu:", err));
-        }
-    }, []);
+    }
+
+    axios.get(API_URL)
+        .then(res => {
+            // Nếu API có dữ liệu mới hơn localStorage, ưu tiên API
+            const apiData = res.data;
+            if (!storedExpenses || JSON.stringify(apiData) !== storedExpenses) {
+                setExpenses(apiData);
+                localStorage.setItem('expenses', JSON.stringify(apiData));
+            }
+        })
+        .catch(err => console.error("Lỗi tải dữ liệu:", err));
+}, []);
+
 
     // 💾 Lưu vào localStorage mỗi khi expenses thay đổi
     useEffect(() => {

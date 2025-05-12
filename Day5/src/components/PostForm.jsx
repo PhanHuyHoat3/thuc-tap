@@ -27,11 +27,16 @@
     }, [postData]);
 
     const mutation = useMutation({
-        mutationFn: (newPost) => (isEdit ? updatePost(id, newPost) : createPost(newPost)),
-        onSuccess: () => {
-        queryClient.invalidateQueries(['posts']);
+    mutationFn: (newPost) => (isEdit ? updatePost(id, newPost) : createPost(newPost)),
+    onSuccess: (data) => {
+        if (!isEdit) {
+        // Đẩy bài viết mới lên đầu danh sách
+        queryClient.setQueryData(['posts'], (oldPosts) => [data, ...(oldPosts || [])]);
+        } else {
+        queryClient.invalidateQueries(['posts']); // cập nhật lại danh sách
+        }
         navigate('/');
-        },
+    },
     });
 
     const handleSubmit = (e) => {

@@ -17,7 +17,7 @@ const validate = () => {
     if (!form.category) errs.category = 'Chọn danh mục';
     setErrors(errs);
     return Object.keys(errs).length === 0;
-  };
+    };
 
         const handleSubmit = e => {
             e.preventDefault();

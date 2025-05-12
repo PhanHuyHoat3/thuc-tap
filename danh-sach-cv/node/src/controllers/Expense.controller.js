@@ -13,7 +13,7 @@
     };
 
     exports.updateExpense = async (req, res) => {
-    const { id } = req.params;
+    const { id } = req.params.id;
     const updated = await Expense.findByIdAndUpdate(id, req.body, { new: true });
     res.json(updated);
     };
