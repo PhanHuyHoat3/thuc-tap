@@ -1,0 +1,10 @@
+.formContainer { max-width: 500px; margin: 2rem auto; padding: 1rem; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.field { display: flex; flex-direction: column; }
+.field label { margin-bottom: 0.5rem; }
+.field input { padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
+.submitButton { padding: 0.5rem; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
+.submitButton:hover { background-color: #218838; }
+.success { color: green; margin-bottom: 1rem; }
+.error { color: red; margin-top: 0.5rem; }
+.loading { text-align: center; font-size: 1.2rem; }

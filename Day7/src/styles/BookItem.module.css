@@ -1,0 +1,43 @@
+.bookItem {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.button:nth-child(1) {
+  background-color: #007bff;
+}
+.button:nth-child(1):hover {
+  background-color: #0056b3;
+}
+.button:nth-child(2) {
+  background-color: #ffc107;
+}
+.button:nth-child(2):hover {
+  background-color: #e0a800;
+}
+.button:nth-child(3) {
+  background-color: #dc3545;
+}
+.button:nth-child(3):hover {
+  background-color: #c82333;
+}
+
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
