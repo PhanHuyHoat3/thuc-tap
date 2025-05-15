@@ -1,0 +1,10 @@
+.taskList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+}

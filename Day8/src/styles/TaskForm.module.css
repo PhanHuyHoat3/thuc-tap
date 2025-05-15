@@ -1,0 +1,50 @@
+.taskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.submitBtn,
+.cancelBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  background-color: #28a745;
+  color: white;
+}
+
+.cancelBtn {
+  background-color: #6c757d;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+}
