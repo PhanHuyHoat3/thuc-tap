@@ -1,0 +1,14 @@
+{
+  "blogs": [
+    {
+      "id": "3094",
+      "title": "Bìa viết 1",
+      "body": "Nội dung bài viết 1\n"
+    },
+    {
+      "id": "91db",
+      "title": "Bài viết 2",
+      "body": "Nội dung bài viết 2"
+    }
+  ]
+}
