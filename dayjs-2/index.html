@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng Theo dõi Thời tiết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .city {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .alert {
+            color: red;
+            font-weight: bold;
+        }
+
+        .log {
+            background: #f0f0f0;
+            padding: 10px;
+            height: 100px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        input,
+        button {
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ứng dụng Theo dõi Thời tiết</h1>
+    <div>
+        <input type="text" id="cityInput" placeholder="Nhập tên thành phố">
+        <button onclick="addCity()">Thêm thành phố</button>
+    </div>
+    <div id="weatherContainer"></div>
+    <div class="log" id="logContainer"></div>
+    <script src="./js/api.js"></script>
+</body>
+
+</html>
